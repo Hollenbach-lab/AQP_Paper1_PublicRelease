@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{ragged2e}
+\usepackage[labelformat=empty]{caption}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+% Table 1 -------------------------------------------------------------------------------------------------------------
+<<echo = FALSE, eval=TRUE, results=tex>>=
+print(xtable(RaceAnc_Summary.0, caption = "A. Number of races (rows) and ancestries (columns) selected"), include.rownames = T)
+@
+<<echo = FALSE, eval=TRUE, results=tex>>=
+print(xtable(RaceAnc_Summary.50, caption = "B. Number of races (rows) and ancestries (columns) selected, only populations with more than 50 individuals"), include.rownames = T)
+@
+\end{document}

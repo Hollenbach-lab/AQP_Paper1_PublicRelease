@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{pdflscape}
+\usepackage[margin=0.6in]{geometry}
+\usepackage{ragged2e}
+\usepackage[labelformat=empty]{caption}
+\usepackage{booktabs}
+\pagenumbering{gobble}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\begin{landscape}
+\begin{center}
+
+<<echo = FALSE, eval=TRUE, results=tex>>=
+  print(xtable(suppTable4), include.rownames = F, booktabs = T)
+@
+  
+  \end{center}
+\end{landscape}
+\end{document}
